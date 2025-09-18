@@ -7,6 +7,8 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { EmailModal } from "@/components/email-modal"
+import GoogleAdsense from "@/plugin/adsense/google-adsense"
 import { Skeleton } from "@/components/ui/skeleton"
 import { toast } from "sonner"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -224,7 +226,24 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="flex-1 container mx-auto px-4 py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 mb-8">
+          {/* Left Ad (Desktop) */}
+          <div className="hidden lg:block rounded-lg">
+            {process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID && process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_LEFT_SLOT ? (
+              <div className="sticky top-6">
+                <GoogleAdsense
+                  client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID}
+                  slot={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_LEFT_SLOT}
+                  type="auto"
+                />
+              </div>
+            ) : (
+              <div className="bg-muted h-full min-h-[300px] rounded-lg flex items-center justify-center">
+                <p className="text-muted-foreground rotate-90 whitespace-nowrap">{t('labels.verticalAdBanner') || 'Vertical Advertisement Banner'}</p>
+              </div>
+            )}
+          </div>
+
           <div className="lg:col-span-3">
             {/* Email Address Section */}
             <Card className="mb-6">
@@ -257,9 +276,19 @@ export default function Home() {
             </Card>
 
             {/* Ad Banner */}
-            <div className="bg-muted h-24 mb-6 rounded-lg flex items-center justify-center">
-              <p className="text-muted-foreground">{t('labels.adBanner') || 'Advertisement Banner'}</p>
-            </div>
+            {process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID && process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_MOBILE_SLOT ? (
+              <div className="mb-6">
+                <GoogleAdsense
+                  client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID}
+                  slot={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_MOBILE_SLOT}
+                  type="auto"
+                />
+              </div>
+            ) : (
+              <div className="bg-muted h-24 mb-6 rounded-lg flex items-center justify-center">
+                <p className="text-muted-foreground">{t('labels.adBanner') || 'Advertisement Banner'}</p>
+              </div>
+            )}
 
             {/* Email List */}
             <div className="space-y-4">
@@ -311,11 +340,21 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Vertical Ad Banner */}
-          <div className="hidden lg:block bg-muted rounded-lg">
-            <div className="h-full flex items-center justify-center">
-              <p className="text-muted-foreground rotate-90 whitespace-nowrap">{t('labels.verticalAdBanner') || 'Vertical Advertisement Banner'}</p>
-            </div>
+          {/* Right Ad (Desktop) */}
+          <div className="hidden lg:block rounded-lg">
+            {process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID && process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_RIGHT_SLOT ? (
+              <div className="sticky top-6">
+                <GoogleAdsense
+                  client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID}
+                  slot={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_RIGHT_SLOT}
+                  type="auto"
+                />
+              </div>
+            ) : (
+              <div className="bg-muted h-full min-h-[300px] rounded-lg flex items-center justify-center">
+                <p className="text-muted-foreground rotate-90 whitespace-nowrap">{t('labels.verticalAdBanner') || 'Vertical Advertisement Banner'}</p>
+              </div>
+            )}
           </div>
         </div>
 
@@ -428,40 +467,14 @@ export default function Home() {
       </main>
 
       {/* Email Modal */}
-      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="max-w-4xl w-full h-[90vh] flex flex-col">
-          <DialogHeader>
-            <DialogTitle>{selectedEmail?.subject}</DialogTitle>
-          </DialogHeader>
-          <div className="flex justify-between items-center mb-4 text-sm">
-            <div>
-              <p>
-                <strong>{t('modal.from') || 'From'}:</strong> {selectedEmail?.from}
-              </p>
-              <p>
-                <strong>{t('modal.date') || 'Date'}:</strong> {selectedEmail?.date ? new Date(selectedEmail.date).toLocaleString() : ''}
-              </p>
-            </div>
-            <div className="flex gap-2">
-              <Button variant="outline" size="sm" onClick={() => selectedEmail && deleteEmail(selectedEmail.id)}>
-                <Trash2 className="h-4 w-4 mr-2" />
-                {t('modal.delete') || 'Delete'}
-              </Button>
-              <Button variant="outline" size="sm" onClick={downloadEmail}>
-                <Download className="h-4 w-4 mr-2" />
-                {t('modal.download') || 'Download'}
-              </Button>
-              <Button variant="outline" size="sm" onClick={printEmail}>
-                <Printer className="h-4 w-4 mr-2" />
-                {t('modal.print') || 'Print'}
-              </Button>
-            </div>
-          </div>
-          <div className="flex-1 overflow-auto border rounded-md p-4">
-            {selectedEmail && <div dangerouslySetInnerHTML={{ __html: selectedEmail.html }} />}
-          </div>
-        </DialogContent>
-      </Dialog>
+      <EmailModal
+        open={isModalOpen}
+        onOpenChange={setIsModalOpen}
+        selectedEmail={selectedEmail}
+        onDelete={(id) => deleteEmail(id)}
+        onDownload={downloadEmail}
+        onPrint={printEmail}
+      />
     </div>
   )
 }

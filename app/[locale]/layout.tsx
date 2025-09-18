@@ -9,6 +9,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/sonner"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
+import GoogleAnalytics from "@/plugin/analytics/google-analytics"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -118,6 +119,9 @@ export default async function LocaleLayout({
             enableSystem
             disableTransitionOnChange
           >
+            {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+              <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+            ) : null}
             <SiteHeader />
             {children}
             <SiteFooter />
