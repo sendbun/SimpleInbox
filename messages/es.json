@@ -1,0 +1,115 @@
+{
+  "app": {
+    "title": "Correo Temporal"
+  },
+  "actions": {
+    "copy": "Copiar",
+    "generateNew": "Generar nuevo",
+    "refreshInbox": "Actualizar bandeja"
+  },
+  "labels": {
+    "messages": "mensajes",
+    "settings": "Configuración",
+    "adBanner": "Banner publicitario",
+    "verticalAdBanner": "Banner publicitario vertical"
+  },
+  "status": {
+    "creatingAccount": "Creando tu cuenta de correo temporal...",
+    "inboxEmpty": "Tu bandeja está vacía",
+    "newEmailsAppear": "Los nuevos correos aparecerán aquí"
+  },
+  "seo": {
+    "heroTitle": "Servicio de correo temporal gratuito",
+    "heroP1": "Obtén direcciones de correo desechables al instante para proteger tu privacidad y evitar el spam.",
+    "heroP2": "Perfecto para registrarte en sitios web, probar aplicaciones o mantener tu bandeja limpia.",
+    "heroP3": "No se requiere registro: comienza a usar correos temporales de inmediato.",
+    "feature": {
+      "instantEmail": "Generación de correo instantáneo",
+      "noRegistration": "No se requiere registro",
+      "realTime": "Actualizaciones en tiempo real"
+    }
+  },
+  "sections": {
+    "whatIs": {
+      "title": "¿Qué es TempMail?",
+      "p1": "TempMail es un servicio gratuito de correo temporal que proporciona direcciones de correo desechables para quienes desean proteger su privacidad en línea.",
+      "p2": "Nuestro servicio te permite crear correos temporales al instante sin registro ni información personal.",
+      "p3": "Estos correos temporales son perfectos para registrarte en sitios, probar aplicaciones, evitar el spam o cualquier situación en la que no quieras usar tu correo real."
+    },
+    "howTo": {
+      "title": "Cómo usar TempMail",
+      "step1": "Visita nuestro sitio web y obtén una dirección de correo temporal al instante",
+      "step2": "Copia la dirección de correo generada a tu portapapeles",
+      "step3": "Úsala para registrarte en sitios o servicios",
+      "step4": "Revisa tu bandeja de entrada para ver los mensajes",
+      "step5": "Genera una nueva dirección cuando quieras mayor privacidad"
+    },
+    "benefits": {
+      "privacy": {
+        "title": "Protección de la privacidad",
+        "desc": "Mantén privado tu correo real y evita mensajes no deseados"
+      },
+      "noRegistration": {
+        "title": "Sin registro",
+        "desc": "Empieza a usar correos temporales de inmediato sin crear una cuenta"
+      },
+      "realTime": {
+        "title": "Actualizaciones en tiempo real",
+        "desc": "Recibe correos al instante y actualiza tu bandeja cuando quieras"
+      }
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "q1": "¿TempMail es completamente gratuito?",
+      "a1": "Sí, nuestro servicio de correo temporal es totalmente gratuito. Sin tarifas ocultas ni funciones premium.",
+      "q2": "¿Cuánto tiempo duran los correos temporales?",
+      "a2": "Los correos temporales están activos mientras mantengas la página abierta. Puedes generar nuevas direcciones cuando quieras.",
+      "q3": "¿Puedo recibir archivos adjuntos?",
+      "a3": "Sí, puedes recibir correos con adjuntos. Descárgalos directamente desde tu bandeja.",
+      "q4": "¿Mis datos están seguros?",
+      "a4": "Priorizamos tu privacidad. No recopilamos información personal y los correos se eliminan automáticamente."
+    }
+  },
+  "modal": {
+    "from": "De",
+    "date": "Fecha",
+    "delete": "Eliminar",
+    "download": "Descargar",
+    "print": "Imprimir"
+  },
+  "nav": {
+    "about": "Acerca de",
+    "privacy": "Política de privacidad",
+    "terms": "Términos del servicio",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "tagline": "Correos temporales seguros y anónimos para tu privacidad y protección.",
+    "company": "Compañía",
+    "language": "Idioma",
+    "rights": "Todos los derechos reservados."
+  },
+  "pages": {
+    "about": {
+      "title": "Acerca de",
+      "subtitle": "Más información sobre TempMail",
+      "body": "TempMail ofrece correos desechables centrados en la privacidad para que te registres en cualquier lugar sin exponer tu bandeja real."
+    },
+    "privacy": {
+      "title": "Política de privacidad",
+      "subtitle": "Tu privacidad es importante",
+      "body": "No requerimos datos personales para usar TempMail. Los correos son temporales y se eliminan automáticamente según nuestra política de retención."
+    },
+    "terms": {
+      "title": "Términos del servicio",
+      "subtitle": "Lee estos términos con atención",
+      "body": "Al usar TempMail, aceptas utilizar direcciones desechables de forma responsable y cumplir las leyes y términos de los sitios."
+    },
+    "contact": {
+      "title": "Contacto",
+      "subtitle": "Ponte en contacto con nosotros",
+      "body": "¿Preguntas o comentarios? Escríbenos y te responderemos pronto."
+    }
+  }
+}
+

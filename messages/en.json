@@ -1,0 +1,115 @@
+{
+  "app": {
+    "title": "Temporary Email"
+  },
+  "actions": {
+    "copy": "Copy",
+    "generateNew": "Generate New",
+    "refreshInbox": "Refresh Inbox"
+  },
+  "labels": {
+    "messages": "messages",
+    "settings": "Settings",
+    "adBanner": "Advertisement Banner",
+    "verticalAdBanner": "Vertical Advertisement Banner"
+  },
+  "status": {
+    "creatingAccount": "Creating your temporary email account...",
+    "inboxEmpty": "Your inbox is empty",
+    "newEmailsAppear": "New emails will appear here"
+  },
+  "seo": {
+    "heroTitle": "Free Temporary Email Service",
+    "heroP1": "Get instant disposable email addresses to protect your privacy and avoid spam.",
+    "heroP2": "Perfect for signing up to websites, testing applications, or keeping your inbox clean.",
+    "heroP3": "No registration required - start using temporary emails right away.",
+    "feature": {
+      "instantEmail": "Instant email generation",
+      "noRegistration": "No registration needed",
+      "realTime": "Real-time inbox updates"
+    }
+  },
+  "sections": {
+    "whatIs": {
+      "title": "What is TempMail?",
+      "p1": "TempMail is a free temporary email service that provides disposable email addresses for users who want to protect their privacy online.",
+      "p2": "Our service allows you to create temporary email addresses instantly without any registration or personal information required.",
+      "p3": "These temporary emails are perfect for signing up to websites, testing applications, avoiding spam, or any situation where you don't want to use your real email address."
+    },
+    "howTo": {
+      "title": "How to Use TempMail",
+      "step1": "Visit our website and get an instant temporary email address",
+      "step2": "Copy the generated email address to your clipboard",
+      "step3": "Use it to sign up for websites or services",
+      "step4": "Check your inbox for incoming messages",
+      "step5": "Generate a new email address anytime for enhanced privacy"
+    },
+    "benefits": {
+      "privacy": {
+        "title": "Privacy Protection",
+        "desc": "Keep your real email address private and avoid unwanted spam messages"
+      },
+      "noRegistration": {
+        "title": "No Registration",
+        "desc": "Start using temporary emails immediately without creating an account"
+      },
+      "realTime": {
+        "title": "Real-time Updates",
+        "desc": "Receive emails instantly and refresh your inbox anytime"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "Is TempMail completely free?",
+      "a1": "Yes, our temporary email service is completely free to use. No hidden fees or premium features.",
+      "q2": "How long do temporary emails last?",
+      "a2": "Temporary emails are active as long as you keep the page open. You can generate new addresses anytime.",
+      "q3": "Can I receive attachments?",
+      "a3": "Yes, you can receive emails with attachments. Download them directly from your inbox.",
+      "q4": "Is my data secure?",
+      "a4": "We prioritize your privacy. No personal information is collected, and emails are automatically deleted."
+    }
+  },
+  "modal": {
+    "from": "From",
+    "date": "Date",
+    "delete": "Delete",
+    "download": "Download",
+    "print": "Print"
+  },
+  "nav": {
+    "about": "About",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact"
+  },
+  "footer": {
+    "tagline": "Secure, anonymous temporary email addresses for your privacy and protection.",
+    "company": "Company",
+    "language": "Language",
+    "rights": "All rights reserved."
+  },
+  "pages": {
+    "about": {
+      "title": "About",
+      "subtitle": "Learn more about TempMail",
+      "body": "TempMail provides privacy-first disposable email addresses so you can sign up anywhere without exposing your real inbox."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "subtitle": "Your privacy matters to us",
+      "body": "We don't require personal data to use TempMail. Emails are temporary and removed automatically according to our retention policy."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "subtitle": "Please read these terms carefully",
+      "body": "By using TempMail, you agree to use disposable addresses responsibly and comply with applicable laws and website terms."
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Get in touch with us",
+      "body": "Questions or feedback? Reach out and we'll get back to you soon."
+    }
+  }
+}
+
